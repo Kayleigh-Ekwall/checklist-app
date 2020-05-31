@@ -95,21 +95,19 @@
 
   .card{
       background-color: darkgray;
-      border-radius: 5px;
+      
   }
 
   .card-header{
       text-align: center;
       background-color: grey;
       color: white;
-  }
-
-  .card-body{
-      text-align: center;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
   }
 
   ul{
-      text-align: center;
+      //text-align: center;
       list-style: none;
   }
 
