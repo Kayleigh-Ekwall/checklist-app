@@ -1,12 +1,28 @@
 <div class ="row">
     <div class="card">
-        <div class="card-header list-group-item">Header</div>
+        <div class="card-header list-group-item">
+
+            {{@checklist.title}}
+
+            {{#if (eq @checklist.status "unstarted")}}
+                <button type = "button" class = "btn-primary pull-right" {{ on "click" this.unstartedToStarted}}>Start</button>
+            {{else if (eq @checklist.status "started")}}
+                <button type = "button" class = "btn-primary pull-right" {{ on "click" this.startedToUnstarted}}>Unstart</button>
+                <button type = "button" class = "btn-primary pull-right" {{ on "click" this.startedToCompleted}}>Complete</button>
+            {{/if}}
+
+            </div>
+        <div class = "card-header list-group-item">
+            {{@checklist.description}}
+            <br>
+            Status: {{@checklist.status}}
+        </div>
+
         <div class="card-body">
             <ul class="list-group">
-                <ChecklistItem/>
-                <ChecklistItem/>
-                <ChecklistItem/>
-                <ChecklistItem/>
+                {{#each @checklist.items as |checklistItem|}}
+                <li><Checklist-Item @item = {{checklistItem}}/></li>
+                {{/each}}
             </ul>
         </div>
     </div>

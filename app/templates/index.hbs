@@ -1,7 +1,31 @@
-<Checklist-Container>
-    <Checklist />
-    <Checklist />
-    <Checklist />
-</Checklist-Container>
+<div class="row">
+    <div class="col-sm-4">
+        <Checklist-Container @title='Unstarted'>
+            {{#each @model as |checklist|}}
+            {{#if (eq checklist.status 'unstarted')}}
+            <Checklist @checklist={{checklist}} />
+            {{/if}}
+            {{/each}}
+        </Checklist-Container>
+    </div>
+    <div class="col-sm-4">
+        <Checklist-Container @title='Started'>
+            {{#each @model as |checklist|}}
+            {{#if (eq checklist.status 'started')}}
+            <Checklist @checklist={{checklist}} />
+            {{/if}}
+            {{/each}}
+        </Checklist-Container>
+    </div>
+    <div class="col-sm-4">
+        <Checklist-Container @title='Completed'>
+            {{#each @model as |checklist|}}
+            {{#if (eq checklist.status 'completed')}}
+            <Checklist @checklist={{checklist}} />
+            {{/if}}
+            {{/each}}
+        </Checklist-Container>
+    </div>
+</div>
 
 {{outlet}}

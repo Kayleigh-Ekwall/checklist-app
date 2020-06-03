@@ -1,0 +1,44 @@
+{
+    "data":[
+        {
+            "type": "checklist",
+            "id": "checklist-01",
+            "attributes": {
+                "title": "Chores",
+                "description": "Checklist for household chores",
+                "status": "unstarted",
+                "items": [
+                    {"title": "Wash dishes", "status": "unstarted"},
+                    {"title": "Make bed", "status": "unstarted"}
+                ]
+            }
+        },
+        {
+            "type": "checklist",
+            "id": "checklist-02",
+            "attributes": {
+                "title": "Groceries",
+                "description": "Grocery list",
+                "status": "started",
+                "items": [
+                    {"title": "Get Fruit", "status": "unstarted"},
+                    {"title": "Get Cookies", "status": "unstarted"}
+                ]
+            }
+        },
+        {
+            "type": "checklist",
+            "id": "checklist-03",
+            "attributes": {
+                "title": "To-Do List",
+                "description": "",
+                "status": "completed",
+                "items": [
+                    {"title": "Do Chores", "status": "unstarted"},
+                    {"title": "Go to store", "status": "unstarted"}
+                ]
+            }
+        }
+    ]
+
+}

@@ -1,11 +1,4 @@
-{{#if this.isChecked}}
-    <li class="list-group-item active">
-        <Input @type = "checkbox" @checked = {{this.isChecked}}/>
-        Checkbox checked
-    </li>
-{{else}}
-    <li class="list-group-item">
-        <Input @type = "checkbox" @checked = {{this.isChecked}}/>
-        Checkbox not checked
-    </li>
-{{/if}}
+<li class="list-group-item {{if this.isChecked "active"}}">
+    <Input @type="checkbox" @checked={{this.isChecked}} />
+    {{@item.title}}
+</li>
